@@ -1,140 +1,157 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOD Rank</title>
+<title>Game Store</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #0f0f1a;
-    color: #fff;
 }
 
-.container {
-    max-width: 420px;
-    margin: auto;
+body {
+    display: flex;
+    background: #0f172a;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #020617;
+    height: 100vh;
     padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5f5;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #1e293b;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    background: #1c1c2e;
-    border-radius: 15px;
+    background: #1e293b;
+    border-radius: 10px;
     padding: 20px;
+    transition: 0.3s;
     text-align: center;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
 
-.card img {
-    width: 160px;
-    border-radius: 12px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(56,189,248,0.3);
 }
 
-.title {
-    font-size: 24px;
-    margin: 10px 0;
+.card h3 {
+    margin-bottom: 10px;
 }
 
 .price {
-    color: #ff9900;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin: 10px 0;
+    color: #38bdf8;
 }
 
-.btn {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
+button {
+    background: #38bdf8;
     border: none;
-    margin-top: 10px;
-    font-size: 16px;
+    padding: 10px 15px;
+    color: black;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
 }
 
-.cart {
-    background: #ff9900;
-    color: white;
-}
-
-.gift {
-    background: #7b3fe4;
-    color: white;
-}
-
-.section {
-    background: #1c1c2e;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 12px;
-}
-
-.section h3 {
-    margin-top: 0;
-    color: #ccc;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin: 6px 0;
+button:hover {
+    background: #0ea5e9;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="sidebar">
+    <h2>Store</h2>
+    <a href="#">Classic</a>
+    <a href="#">Premium</a>
+    <a href="#">Coins</a>
+    <a href="#">Keys</a>
+</div>
 
-    <!-- CARD -->
+<div class="main">
+    <div class="header">Classic Category</div>
+
+```
+<div class="grid">
+
     <div class="card">
-        <img src="https://via.placeholder.com/150" alt="Rank">
-        <div class="title">GOD Rank (+3600 Coins)</div>
-        <div class="price">$27.00 USD</div>
-
-        <button class="btn cart">Add to Cart</button>
-        <button class="btn gift">Gift this Package</button>
+        <h3>Classic Rank</h3>
+        <p>Basic perks & commands</p>
+        <div class="price">₹199</div>
+        <button>Purchase</button>
     </div>
 
-    <!-- PERKS -->
-    <div class="section">
-        <h3>Perks</h3>
-        <ul>
-            <li>Access to 2 Private Vaults</li>
-            <li>54 Slots per Vault</li>
-            <li>2X AFK Rewards</li>
-            <li>1x Ambani Key every month</li>
-            <li>1x Fire Key every month</li>
-            <li>1x Matrix Key every month</li>
-            <li>Priority Queue Access</li>
-            <li>23 Auction Listings</li>
-            <li>34 Homes</li>
-            <li>GOD Prefix</li>
-        </ul>
+    <div class="card">
+        <h3>Starter Kit</h3>
+        <p>Essential items for survival</p>
+        <div class="price">₹99</div>
+        <button>Purchase</button>
     </div>
 
-    <!-- COMMANDS -->
-    <div class="section">
-        <h3>Commands</h3>
-        <ul>
-            <li>/sit</li>
-            <li>/spin</li>
-            <li>/lay</li>
-            <li>/nick</li>
-            <li>/bezooka</li>
-            <li>/enderchest</li>
-            <li>/workbench</li>
-            <li>/disposal</li>
-            <li>/condense</li>
-            <li>/pweather</li>
-            <li>/hat</li>
-            <li>/kit god</li>
-        </ul>
+    <div class="card">
+        <h3>Coins Pack</h3>
+        <p>500 Coins</p>
+        <div class="price">₹49</div>
+        <button>Purchase</button>
     </div>
+
+    <div class="card">
+        <h3>VIP Rank</h3>
+        <p>Extra perks & boosts</p>
+        <div class="price">₹299</div>
+        <button>Purchase</button>
+    </div>
+
+</div>
+```
 
 </div>
 
